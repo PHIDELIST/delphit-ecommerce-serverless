@@ -1,0 +1,22 @@
+.Fruits-Container{
+    display: flex;
+    flex-direction: row;
+}
+.Vegeterian{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/veges1.jpg');
+}
+.fruit-veg{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/veges2.jpg');
+}
+.del-energy{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/veges3.jpg');
+}
+.Fruits-Container button{
+    background-color: rgb(141, 244, 141);
+}
