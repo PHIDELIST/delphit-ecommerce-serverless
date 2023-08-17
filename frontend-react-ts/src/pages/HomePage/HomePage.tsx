@@ -1,11 +1,25 @@
 import './HomePage.css'
+import {useEffect, useRef} from 'react'
 import { useDispatch } from 'react-redux';
 import { setsUI } from '../../redux/uiSlice';
+import video from '../../assets/video.mp4'
+import useAutoPlayVideo from '../../useAutoPlayVideo';
+import CategoryContainer from '../../components/Categories/CategoryContainer';
+
 const HomePage = () => {
-const dispatch = useDispatch();
-const handleFruits = () => {
-    dispatch(setsUI('fruits'));
-};
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const shouldPlay = useAutoPlayVideo(videoRef);
+    const dispatch = useDispatch();
+    const handleFruits = () => {
+        dispatch(setsUI('fruits'));
+    };
+    useEffect(() => {
+        if(videoRef.current && shouldPlay){
+            videoRef.current.addEventListener('ended', () => {
+                videoRef.current?.play();
+            });
+        }
+    }, [shouldPlay]);
     return(
         <>
          <div className="Home-Container">
@@ -16,8 +30,9 @@ const handleFruits = () => {
                     <input type="text" /><button>Subscribe</button>
                 </div>
                 <div className='Intro-left'>
-                    <h1>Buy With Free Shopping</h1>
-                    <p>test the feeling</p>
+                    <video ref={videoRef} autoPlay={shouldPlay} muted controls>
+                        <source src={video} type="video/mp4" />
+                    </video>
                 </div>
             </div>
             <div className='shop-by-category'>
@@ -33,6 +48,7 @@ const handleFruits = () => {
                     <div className='category-card'><p>Drinks</p></div>
                 </div>
             </div>
+            <CategoryContainer />
          </div>
         </>
     )

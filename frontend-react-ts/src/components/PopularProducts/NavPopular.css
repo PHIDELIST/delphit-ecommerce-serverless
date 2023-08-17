@@ -1,0 +1,17 @@
+.navpopular-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  
+}
+.popular-navItems ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}

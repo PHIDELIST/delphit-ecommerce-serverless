@@ -1,21 +1,38 @@
 .Fruits-Container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 8em;
+    align-items: center;
+    margin-top: 2em;
+    flex-wrap: wrap;
 }
 .Vegeterian{
     display: flex;
     flex-direction: column;
     background-image: url('../../assets/veges1.jpg');
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 .fruit-veg{
     display: flex;
     flex-direction: column;
     background-image: url('../../assets/veges2.jpg');
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 .del-energy{
     display: flex;
     flex-direction: column;
     background-image: url('../../assets/veges3.jpg');
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 .Fruits-Container button{
     background-color: rgb(141, 244, 141);

@@ -1,0 +1,18 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    justify-content: center;
+}
+.about-container p{
+    text-align: justify;
+    list-style: none;
+    line-height: 20px;
+    font-style: normal;
+    font-family: Georgia;
+}
+.about-container h3{
+    padding: 0;
+    margin: 0;
+}

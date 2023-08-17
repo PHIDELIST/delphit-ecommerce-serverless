@@ -13,7 +13,7 @@ const Fruits = () => {
             </div>
             <div className="del-energy">
                 <h3>Delicous Energy For Every day</h3>
-                <button>Shop  Now!</button>
+                <button>Shop Now!</button>
             </div>
         </div>
         </>
