@@ -6,6 +6,7 @@ import video from '../../assets/video.mp4'
 import useAutoPlayVideo from '../../useAutoPlayVideo';
 import CategoryContainer from '../../components/Categories/CategoryContainer';
 
+
 const HomePage = () => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const shouldPlay = useAutoPlayVideo(videoRef);
@@ -13,6 +14,27 @@ const HomePage = () => {
     const handleFruits = () => {
         dispatch(setsUI('fruits'));
     };
+    const handleSets= () => {
+        dispatch(setsUI('sets'))
+    }
+    const handleVegetables = () => {
+        dispatch(setsUI('vegetables'))
+    }
+    const handleGreenery = () => {
+        dispatch(setsUI('greenary'))
+    }
+    const handleFungi = () => {
+        dispatch(setsUI('fungi'))
+    }
+    const handleGroceries = () => {
+        dispatch(setsUI('groceries'))
+    }
+    const handleSweets = () => {
+        dispatch(setsUI('sweets'))
+    }
+    const handleDrinks = () => {
+        dispatch(setsUI('drinks'))
+    }
     useEffect(() => {
         if(videoRef.current && shouldPlay){
             videoRef.current.addEventListener('ended', () => {
@@ -38,14 +60,14 @@ const HomePage = () => {
             <div className='shop-by-category'>
                 <h1>Shop By Categories</h1>
                 <div className='category-cards-container'>
-                    <div className='category-card' ><p>Sets</p></div>
+                    <div className='category-card' onClick={handleSets} ><p>Sets</p></div>
                     <div className='category-card' onClick={handleFruits}><p>Fruits</p></div>
-                    <div className='category-card'><p>Vegetables</p></div>
-                    <div className='category-card'><p>Greenery</p></div>
-                    <div className='category-card'><p>Fungi</p></div>
-                    <div className='category-card'><p>Groceries</p></div>
-                    <div className='category-card'><p>Sweets</p></div>
-                    <div className='category-card'><p>Drinks</p></div>
+                    <div className='category-card' onClick={handleVegetables}><p>Vegetables</p></div>
+                    <div className='category-card' onClick={handleGreenery}><p>Greenery</p></div>
+                    <div className='category-card' onClick={handleFungi}><p>Fungi</p></div>
+                    <div className='category-card' onClick={handleGroceries}><p>Groceries</p></div>
+                    <div className='category-card' onClick={handleSweets}><p>Sweets</p></div>
+                    <div className='category-card' onClick={handleDrinks}><p>Drinks</p></div>
                 </div>
             </div>
             <CategoryContainer />

@@ -1,0 +1,14 @@
+.Cart-Main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10em;
+    align-items: center;
+    padding: 5em;
+
+}
+.Cart-Main button{
+    background-color: green;
+    padding: 3rem;
+    font-family:verdana;
+}
