@@ -168,4 +168,18 @@
   .card-btn-best:active {
     transform: translateY(3px);
   }
-  
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.img-bes img{
+  width: 80%;
+  border-radius: 5px;
+}
