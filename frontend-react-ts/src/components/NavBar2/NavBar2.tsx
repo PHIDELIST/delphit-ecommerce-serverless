@@ -5,18 +5,20 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PhoneIcon from '@mui/icons-material/Phone';
+import { useNavigate } from 'react-router-dom';
 const NavBar2 = () => {
+  const navigate = useNavigate();
     return (
     <>
     <div className="NavBar2">
       <div className="Links">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Shop</li>
-          <li>Blog</li>
-          <li>Out Team</li>
-          <li>Contact</li>
+          <li onClick={ () => navigate('/')}>Home</li>
+          <li onClick={() => navigate('about')}>About</li>
+          <li onClick={() => navigate('shop')}>Shop</li>
+          <li onClick={() => navigate('blog')}>Blog</li>
+          <li onClick={() => navigate('team')}>Our Team</li>
+          <li onClick={() => navigate('contact')}>Contact</li>
         </ul>
       </div>
       <div className="SocialMedia"> 

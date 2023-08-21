@@ -7,6 +7,7 @@
     gap: 15px;
     align-items: center;
     border-bottom: 1px solid grey;
+    background-color: rgb(239, 251, 222);
 }
 .CartAccounts{
     display: flex;

@@ -11,12 +11,40 @@ const BestSales = () => {
           price: 299,
           
         },
-      
         {
           name: 'Product 3',
           price: 149,
           
-        }]
+        },{
+          name: 'Product 4',
+          price: 299,
+          
+        },
+        {
+          name: 'Product 5',
+          price: 299,
+          
+        },
+        {
+          name: 'Product 6',
+          price: 299,
+          
+        },
+        {
+          name: 'Product 7',
+          price: 299,
+          
+        },
+        {
+          name: 'Product 8',
+          price: 299,
+          
+        },
+        {
+          name: 'Product 9',
+          price: 299,
+          
+        },]
      return(
         <>
         <div className='Best-container'>

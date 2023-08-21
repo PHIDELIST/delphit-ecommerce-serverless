@@ -3,7 +3,6 @@ import NavBar1 from "../NavBar1/NavBar1";
 import NavBar2 from "../NavBar2/NavBar2";
 import PopularProducts from "../PopularProducts/PopularProducts";
 import BestSells from '../BestSells/BestSales';
-import AboutPage from "../../pages/AboutPage/AboutPage";
 import Footer from "../Footer/Footer";
 const Home = () => {
     return (
@@ -15,7 +14,7 @@ const Home = () => {
             <HomePage />
            <PopularProducts />
            <BestSells />
-           <AboutPage />
+           
           </div>
           <Footer />
           

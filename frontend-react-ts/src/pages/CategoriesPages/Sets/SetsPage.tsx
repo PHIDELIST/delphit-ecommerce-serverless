@@ -1,67 +1,65 @@
-import NavPopular from './NavPopular';
-import './PopularProducts.css';
-import product from '../../assets/mushroom.jpg'
-
-// Mock product data
-const mockProducts = [
-  {
-    name: 'Product 1',
-    price: 199,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 2',
-    price: 299,
-    imageUrl: product,
-  },
-
-  {
-    name: 'Product 3',
-    price: 149,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 4',
-    price: 99,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 5',
-    price: 249,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 6',
-    price: 179,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 7',
-    price: 349,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 8',
-    price: 129,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 9',
-    price: 289,
-    imageUrl: product,
-  },
-  {
-    name: 'Product 10',
-    price: 199,
-    imageUrl: product,
-  },
-];
-
-const PopularProducts = () => {
-  return (
-    <div className="popular-products-container">
-      <NavPopular />
-      <div className='products-cards'>
+import './SetsPage.css'
+import product from '../../../assets/veges3.jpg'
+const SetsPage = () => {
+    const mockProducts = [
+        {
+          name: 'Product 1',
+          price: 199,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 2',
+          price: 299,
+          imageUrl: product,
+        },
+      
+        {
+          name: 'Product 3',
+          price: 149,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 4',
+          price: 99,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 5',
+          price: 249,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 6',
+          price: 179,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 7',
+          price: 349,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 8',
+          price: 129,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 9',
+          price: 289,
+          imageUrl: product,
+        },
+        {
+          name: 'Product 10',
+          price: 199,
+          imageUrl: product,
+        },
+      ];
+    return(
+        <>
+        <div>
+            <h1>Product Set Categories</h1>
+        </div>
+        <div className='products-cards'>
         {mockProducts.map((product, index) => (
                 
                     <div className="card-product" key={index}>
@@ -85,8 +83,7 @@ const PopularProducts = () => {
             </div>
         ))}
     </div>
-    </div>
-  );
-};
-
-export default PopularProducts;
+        </>
+    )
+}
+export default SetsPage;

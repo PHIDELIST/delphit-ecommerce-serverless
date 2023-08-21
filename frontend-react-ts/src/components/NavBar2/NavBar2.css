@@ -16,7 +16,9 @@
 .SocialMedia{
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .Contacts{
     display: flex;
