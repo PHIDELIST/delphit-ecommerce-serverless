@@ -74,12 +74,10 @@ const CartPage: React.FC<PropsFromRedux> = ({ cartItems }) => {
     );
 };
 
-// Map state from the Redux store to component props
 const mapStateToProps = (state: RootState) => ({
-    cartItems: state.cart.cartItems, // Assuming your cart state is under 'cart' slice
+    cartItems: state.cart.cartItems, 
 });
 
-// Connect the component to Redux
 const connector = connect(mapStateToProps);
 
 export default connector(CartPage);

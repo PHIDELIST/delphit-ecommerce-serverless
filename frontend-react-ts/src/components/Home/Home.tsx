@@ -4,6 +4,7 @@ import NavBar2 from "../NavBar2/NavBar2";
 import PopularProducts from "../PopularProducts/PopularProducts";
 import BestSells from '../BestSells/BestSales';
 import Footer from "../Footer/Footer";
+import './Home.css'
 const Home = () => {
     return (
       <>
