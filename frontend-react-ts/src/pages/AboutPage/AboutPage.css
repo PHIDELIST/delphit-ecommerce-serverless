@@ -1,9 +1,13 @@
+.about{
+    background-color: rgb(238, 248, 223);
+}
 .about-container{
     display: flex;
     flex-direction: column;
     padding-left: 5rem;
     padding-right: 5rem;
     justify-content: center;
+
 }
 .about-container p{
     text-align: justify;

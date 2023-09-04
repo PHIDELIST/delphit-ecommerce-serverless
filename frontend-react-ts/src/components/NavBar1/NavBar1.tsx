@@ -3,6 +3,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useNavigate } from 'react-router-dom';
+import NavBar2 from '../NavBar2/NavBar2';
 const NavBar1 = () => {
     const navigate = useNavigate();
     return (
@@ -13,6 +14,7 @@ const NavBar1 = () => {
                     <input type="search" placeholder="Search" />
                     <button>Search</button>
                 </div>
+                <NavBar2/>
                 <div className="CartAccounts">
                     <button onClick={() => navigate('favorites')}><FavoriteBorderIcon/></button>
                     <button onClick={() => navigate('cart')}><AddShoppingCartIcon /></button>

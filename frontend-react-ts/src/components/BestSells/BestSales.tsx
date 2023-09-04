@@ -5,21 +5,19 @@ import { RootState } from '../../redux/store';
 import best from '../../assets/veges1.jpg'
 import './BestSales.css'
 
-// Define the product interface
+
 interface Product {
     name: string;
     price: number;
 }
 
-// Define the props types for the component
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
-// Props interface for the component
 interface BestSalesProps extends PropsFromRedux {
     products: Product[];
+    cartItems: Product[];
 }
 
-// Define your dummy data
 const BestSalesData: Product[] = [
     {
         name: 'Product 1',
@@ -59,13 +57,22 @@ const BestSalesData: Product[] = [
     },
 ];
 
-const BestSales: React.FC<BestSalesProps> = ({ addToCart }) => {
+
+const BestSales: React.FC<BestSalesProps> = ({ addToCart, cartItems }) => {
     const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
     const handleAddToCart = (product: Product) => {
-        addToCart(product);
-        setSuccessMessage(`${product.name} has been added to your cart.`);
-        // Clear the success message after a delay (e.g., 3 seconds)
+        
+        const isProductInCart = cartItems.some(item => item.name === product.name);
+
+        if (isProductInCart) {
+            setSuccessMessage(`${product.name} is already in your cart.`);
+        } else {
+            addToCart(product);
+            setSuccessMessage(`${product.name} has been added to your cart.`);
+        }
+
+      
         setTimeout(() => {
             setSuccessMessage(null);
         }, 3000);
@@ -78,7 +85,7 @@ const BestSales: React.FC<BestSalesProps> = ({ addToCart }) => {
                 {BestSalesData.map((product, index) => (
                     <div className="card-best" key={index}>
                         <div className="card-img-best">
-                            {/* Placeholder for your image */}
+                           
                             <div className="img-bes">
                               <img src={best} alt="" />
                             </div>
@@ -111,7 +118,11 @@ const BestSales: React.FC<BestSalesProps> = ({ addToCart }) => {
     );
 };
 
-// Connect the component to Redux
-const connector = connect(null, { addToCart });
+
+const mapStateToProps = (state: RootState) => ({
+    cartItems: state.cart.cartItems,
+});
+
+const connector = connect(mapStateToProps, { addToCart });
 
 export default connector(BestSales);
