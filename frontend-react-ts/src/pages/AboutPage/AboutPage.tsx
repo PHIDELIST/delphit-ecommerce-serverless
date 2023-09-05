@@ -1,10 +1,8 @@
 import './AboutPage.css'
-import NavBar1 from '../../components/NavBar1/NavBar1'
 const AboutPage = () => {
     return(
         <>
         <div className='about'>
-        <NavBar1 />
         <div className='about-container'>
             <h1>Online Store of Products With Delivery</h1>
             <p>Delphit is a direct importer of fruits, vegetables, fruit salads, mushrooms Since 2018 and already more than 14 years , we have been delivering products to the homes of Kenyans, Restaurants, cafes and other partners</p>
@@ -21,8 +19,7 @@ const AboutPage = () => {
             <p>Looking for an original gift for a loved one , friend or collegue? In our online grocery you can order Fruit Box a set of exotic fruits in a beautiful craft box, Such a gift will be remembered fro a long time and will cause pleasant emotions and impressions of new tastes. In addition you can assemble and buy such a set yourselft by choosing any fruits, berries or nut from the assortment.</p>
             <p>The high quality of our products is confirmed by relevant certificate and the international HACCP certificate. We can make that customers recieve only selected natural products ready to use. They are stored in our own warehouses where the correct temperature is maintained to keep them fresh and ripe</p>
         </div>
-        </div>
-        </>
+        </div>       </>
     )
 }
 export default AboutPage;

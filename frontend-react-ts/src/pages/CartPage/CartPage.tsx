@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { RootState } from '../../redux/store.ts';
-import NavBar1 from '../../components/NavBar1/NavBar1';
 import Footer from '../../components/Footer/Footer.tsx';
 import { useNavigate } from 'react-router-dom';
 import itemphoto from '../../assets/veges1.jpg'
@@ -49,7 +48,7 @@ const CartPage: React.FC<PropsFromRedux> = ({ cartItems }) => {
 
     return (
         <>
-            <NavBar1 />
+        
 
             <div className='Cart-Main-container'>
                 <div className='Cart-left'>
@@ -61,7 +60,7 @@ const CartPage: React.FC<PropsFromRedux> = ({ cartItems }) => {
                         <ul>
                             {cartItem.map((item, index) => (
                                 <div className='cart-items-container' key={index}>
-                                    <button onClick={() => handleAddItem(index)}>+</button>
+                                    <button onClick={() => handleRemoveItem(index)}>-</button>
                                     <div className='item-img'>
                                         <img src={itemphoto} alt="" />
                                     </div>
@@ -70,7 +69,7 @@ const CartPage: React.FC<PropsFromRedux> = ({ cartItems }) => {
                                         <p> ${item.price}</p>
                                         <p> Quantity: {item.quantity} </p>
                                     </div>
-                                    <button onClick={() => handleRemoveItem(index)}>-</button>
+                                    <button onClick={() => handleAddItem(index)}>+</button>
                                 </div>
                             ))}
                         </ul>
@@ -86,25 +85,13 @@ const CartPage: React.FC<PropsFromRedux> = ({ cartItems }) => {
                     <p>Total: ${Total.toFixed(2)}</p>
                     <button><AddShoppingCartIcon />Checkout </button>
                 </div>
-
-                <div className='shipping-coupon'>
-                    <div className='shipping'>
-                        <h5>Calculate Shipping</h5>
-                        <p>Flat rate 5%</p>
-                        <input type="options" placeholder='search' />
-                        <div className='county-zip'>
-                            <input type="text" placeholder='State/Country' />
-                            <input type="text" placeholder='Post Code /Zip' />
-                        </div>
-                    </div>
-                    <div className='Coupon' >
+                <div className='Coupon' >
                         <h6>Apply Coupon</h6>
                         <p>Using a Promo Code?</p>
                         <input type="text" placeholder='Enter coupon number' />
                         <button> Apply</button>
                     </div>
                 </div>
-            </div>
             <Footer />
         </>
     );

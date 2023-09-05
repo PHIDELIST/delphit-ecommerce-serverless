@@ -1,0 +1,25 @@
+.profile-side-nav-main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(92, 102, 92);
+    width: 20%;
+    height: 90vh;
+    border-radius: 3px;
+
+}
+.profile-side-nav-main button{
+    padding: 10px;
+    width: 100%;
+}
+.profile-card img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

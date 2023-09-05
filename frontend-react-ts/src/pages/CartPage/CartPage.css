@@ -79,3 +79,10 @@
     gap: 1rem;
     padding-top: 1em;
 }
+.Coupon input{
+  margin-right: 5px;
+}
+.Coupon button{
+    padding-left: 5px;
+    padding-right: 5px;
+}
