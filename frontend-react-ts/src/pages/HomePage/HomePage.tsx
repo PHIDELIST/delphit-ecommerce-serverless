@@ -48,7 +48,7 @@ const HomePage = () => {
             <div className="Welcome-Imgs">
                 <div className='Intro-right'>
                     <h1>Rice Drink with Vitamin D3</h1>
-                    <p>Upto 30% off your first order</p>
+                    <p>Subscribe to our weekly recipe newspaper</p>
                     <input type="text" /><button>Subscribe</button>
                 </div>
                 <div className='Intro-left'>
