@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { RootState } from '../../redux/store.ts';
-import Footer from '../../components/Footer/Footer.tsx';
 import { useNavigate } from 'react-router-dom';
 import itemphoto from '../../assets/veges1.jpg'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -83,16 +82,9 @@ const CartPage: React.FC<PropsFromRedux> = ({ cartItems }) => {
                     <p>Shipping: ${shipping.toFixed(2)}</p>
                     <p>Estimated Tax: ${tax.toFixed(2)}</p>
                     <p>Total: ${Total.toFixed(2)}</p>
-                    <button><AddShoppingCartIcon />Checkout </button>
+                    <button onClick={() => navigate('/checkout')}><AddShoppingCartIcon />Checkout </button>
                 </div>
-                <div className='Coupon' >
-                        <h6>Apply Coupon</h6>
-                        <p>Using a Promo Code?</p>
-                        <input type="text" placeholder='Enter coupon number' />
-                        <button> Apply</button>
-                    </div>
                 </div>
-            <Footer />
         </>
     );
 };

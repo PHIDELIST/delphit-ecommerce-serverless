@@ -1,0 +1,26 @@
+.checkout-main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(207, 235, 207);
+    height: 85vh;
+}
+.checkout-main button {
+    margin-top: 15px;
+    padding: 5px;
+}
+.client-address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+.card-payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}

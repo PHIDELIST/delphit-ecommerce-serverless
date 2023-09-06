@@ -56,6 +56,8 @@ const SetsPage = () => {
       ];
     return(
         <>
+        
+        <div className='categories-main-page'>
         <div>
             <h1>Product Set Categories</h1>
         </div>
@@ -82,6 +84,7 @@ const SetsPage = () => {
                 </div>
             </div>
         ))}
+    </div>
     </div>
         </>
     )

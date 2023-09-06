@@ -7,6 +7,8 @@ import AboutPage from './pages/AboutPage/AboutPage'
 import SetsPage from './pages/CategoriesPages/Sets/SetsPage'
 import ProfilePage from './pages/Profile/ProfilePage'
 import NavBar1 from './components/NavBar1/NavBar1'
+import CheckoutPage from './pages/Checkout/CheckoutPage'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -20,8 +22,9 @@ function App() {
         <Route path='about' element={<AboutPage />} />
         <Route path='setscategory' element={<SetsPage />} />
         <Route path='profile' element={<ProfilePage />} />
+        <Route path='checkout' element={<CheckoutPage />} />
       </Routes>
-
+    <Footer />
     </BrowserRouter>
       
     </>

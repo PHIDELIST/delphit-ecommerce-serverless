@@ -1,0 +1,6 @@
+.categories-main-page{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(189, 223, 189);
+    padding: 10px;
+}
