@@ -73,6 +73,7 @@ const CartPage: React.FC<PropsFromRedux> = ({ cartItems }) => {
                             ))}
                         </ul>
                     )}
+                    {/* thhis should pasisit data to db  */}
                     <button onClick={() => navigate('/')}>Continue Shopping</button>
                 </div>
 

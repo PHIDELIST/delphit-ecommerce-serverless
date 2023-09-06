@@ -11,7 +11,6 @@ const fetchAllProducts = async (allData = [],exclusiveStartKey = null) => {
     };
 
     let data = await docClient.scan(params);
-    
     if(data['items'].length > 0) {
         allData = [...allData, ...data['items']]
         }
