@@ -1,7 +1,6 @@
 import HomePage from "../../pages/HomePage/HomePage";
 import PopularProducts from "../PopularProducts/PopularProducts";
 import BestSells from '../BestSells/BestSales';
-import Footer from "../Footer/Footer";
 import './Home.css'
 const Home = () => {
     return (
@@ -11,10 +10,7 @@ const Home = () => {
             <HomePage />
            <PopularProducts />
            <BestSells />
-           
           </div>
-          <Footer />
-          
     </div>
     </>
   );

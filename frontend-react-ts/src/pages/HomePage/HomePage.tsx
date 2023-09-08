@@ -52,9 +52,11 @@ const HomePage = () => {
                     <input type="text" /><button>Subscribe</button>
                 </div>
                 <div className='Intro-left'>
+                    
                     <video ref={videoRef} autoPlay={shouldPlay} muted controls>
                         <source src={video} type="video/mp4" />
                     </video>
+                   
                 </div>
             </div>
             <div className='shop-by-category'>

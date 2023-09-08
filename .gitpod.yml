@@ -11,7 +11,7 @@ tasks:
   - name: npm
     before: |
       npm install - g npm@10.0.0
-      cd /frontend-react-ts
+      cd ./workspace/frontend-react-ts
       npm install
   - name: aws cdk
     before: |
